@@ -100,7 +100,7 @@ const EditTask: React.FC = () => {
           <label className='text-gray-400 absolute z-10 left-8 -top-4 bg-white text-2xl'>Tags</label>
           <div className='flex items-center justify-between relative'>
             <select
-              className='border p-5 rounded-md px-8 relative w-full appearance-none'
+              className='border p-5 bg-white rounded-md px-8 relative w-full appearance-none'
               {...register("tags", {
                 required: "Tags is required"
               })}
