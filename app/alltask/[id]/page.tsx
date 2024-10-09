@@ -50,7 +50,7 @@ const EditTask: React.FC = () => {
       setLoading(true);
       const res = await axios.put(`/api/tasks/${id}`, data);
       if (res.status === 200) {
-        router.push('/alltask'); // Redirect to tasks list after successful update
+        router.push('/alltask'); 
       }
     } catch (error) {
       console.error(error);
@@ -74,7 +74,7 @@ const EditTask: React.FC = () => {
         <div className='relative'>
           <label className='text-gray-400 absolute z-10 left-8 -top-5 bg-white text-2xl'>Task Title</label>
           <input
-            className='w-full border p-5 rounded-md px-8 relative'
+            className='w-full border p-5 text-gray-800 rounded-md px-8 relative'
             {...register("taskTitle", {
               required: "Task Title is required"
             })}
@@ -90,17 +90,17 @@ const EditTask: React.FC = () => {
             {...register("description", {
               required: "Description is required"
             })}
-            className='border p-5 rounded-md px-8 relative pb-40 w-full'
+            className='border p-5 rounded-md text-gray-800 px-8 relative pb-40 w-full'
             placeholder="Briefly describe your task..."
           />
         </div>
         {errors.description && <p className='text-red-600 font-semibold'>{errors.description.message}</p>}
         
         <div className='relative'>
-          <label className='absolute z-10 left-8 -top-4 text-gray-500 bg-white text-2xl px-3'>Tags</label>
+          <label className='absolute z-10 left-8 -top-4 text-gray-400 bg-white text-2xl px-3'>Tags</label>
           <div className='flex items-center justify-between relative'>
             <select
-              className='border p-5 text-gray-400 bg-white rounded-md px-8 relative w-full appearance-none'
+              className='border p-5 text-gray-800 bg-white rounded-md px-8 relative w-full appearance-none'
               {...register("tags", {
                 required: "Tags is required"
               })}
