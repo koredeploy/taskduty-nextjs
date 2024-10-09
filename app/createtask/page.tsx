@@ -70,10 +70,10 @@ const NewTask: React.FC = () => {
         {errors.description && <p className='text-red-600 font-semibold'>{errors.description.message}</p>}
         
         <div className='relative'>
-          <label className=' absolute z-10 left-8 -top-4 bg-white px-3 text-2xl'>Tags</label>
+          <label className=' absolute z-10 left-8 -top-4 bg-white px-3 text-gray-400 text-2xl'>Tags</label>
           <div className='flex items-center justify-between relative'>
             <select
-              className='border p-5 rounded-md px-8 relative w-full bg-white appearance-none'
+              className='border p-5 text-gray-400 rounded-md px-8 relative w-full bg-white appearance-none'
               {...register("tags", {
                 required: "Tags is required"
               })}
